@@ -1302,6 +1302,7 @@ pre .javascript .function {
 }
 .posts-collapse .post-title a {
   color: #666;
+  color: #166bec;
   border-bottom: none;
 }
 .page-home .post-type-quote .post-header,
@@ -1325,6 +1326,7 @@ pre .javascript .function {
   display: inline-block;
   position: relative;
   color: #555;
+  color: #166bec;
   border-bottom: none;
   line-height: 1.2;
   vertical-align: top;
@@ -1697,7 +1699,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff78ff;
+  background: #57f7a7;
 }
 .links-of-blogroll {
   font-size: 13px;
