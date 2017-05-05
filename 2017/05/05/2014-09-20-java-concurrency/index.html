@@ -96,7 +96,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/05/05/2014-09-20-java-concurrency/index.html">
 <meta property="og:site_name" content="dankan108">
 <meta property="og:description" content="如何创建一个线程按 Java 语言规范中的说法，创建线程只有一种方式，就是创建一个 Thread 对象。而从 HotSpot 虚拟机的角度看，创建一个虚拟机线程有两种方式，一种是创建 Thread 对象，另一种是创建 一个本地线程，加入到虚拟机线程中。 如果从 Java 语法的角度。有两种方法。 第一是继承 Thread 类，实现 run 方法，并创建子类对象。 12345678910public">
-<meta property="og:updated_time" content="2017-05-05T06:34:44.565Z">
+<meta property="og:updated_time" content="2017-05-05T14:57:02.882Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java 中的并发">
 <meta name="twitter:description" content="如何创建一个线程按 Java 语言规范中的说法，创建线程只有一种方式，就是创建一个 Thread 对象。而从 HotSpot 虚拟机的角度看，创建一个虚拟机线程有两种方式，一种是创建 Thread 对象，另一种是创建 一个本地线程，加入到虚拟机线程中。 如果从 Java 语法的角度。有两种方法。 第一是继承 Thread 类，实现 run 方法，并创建子类对象。 12345678910public">
@@ -301,7 +301,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="dankan108">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/touxiang.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -388,7 +388,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">startThreadUseSubClass</span><span class="params">()</span> </span>&#123;</div><div class="line">	<span class="class"><span class="keyword">class</span> <span class="title">MyThread</span> <span class="keyword">extends</span> <span class="title">Thread</span> </span>&#123;</div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</div><div class="line">			System.out.println(<span class="string">"start thread using Subclass of Thread"</span>);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	MyThread thread = <span class="keyword">new</span> MyThread();</div><div class="line">	thread.start();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>另一种是传递给 Thread 构造函数一个 Runnable 对象。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">startThreadUseRunnalbe</span><span class="params">()</span> </span>&#123;</div><div class="line">	Thread thread = <span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable() &#123;</div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</div><div class="line">			System.out.println(<span class="string">"start thread using runnable"</span>);</div><div class="line">		&#125;</div><div class="line">	&#125;);</div><div class="line">	thread.start();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>当然， Runnalbe 对象，也不是只有这一种形式，例如如果我们想要线程执行时返回一个值，就需要用到另一种 Runnalbe 对象，它<br>对原来的 Runnalbe 对象进行了包装。</p>
+<p>当然， Runnalbe 对象，也不是只有这一种形式，例如如果我们想要线程执行时返回一个值，就需要用到另一种 Runnalbe 对象，它<br>对原来的 Runnalbe 对象进行了包装。<br><a id="more"></a></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">startFutureTask</span><span class="params">()</span> </span>&#123;</div><div class="line">	FutureTask&lt;Integer&gt; task = <span class="keyword">new</span> FutureTask&lt;&gt;(<span class="keyword">new</span> Callable&lt;Integer&gt;() &#123;</div><div class="line">		<span class="function"><span class="keyword">public</span> Integer <span class="title">call</span><span class="params">()</span> </span>&#123;</div><div class="line">			<span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">		&#125;</div><div class="line">	&#125;);</div><div class="line"></div><div class="line">	<span class="keyword">new</span> Thread(task).start();</div><div class="line"></div><div class="line">	<span class="keyword">try</span> &#123;</div><div class="line">		Integer result = task.get();</div><div class="line">		System.out.println(<span class="string">"future result "</span> + result);</div><div class="line">	&#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</div><div class="line">		e.printStackTrace();</div><div class="line">	&#125; <span class="keyword">catch</span> (ExecutionException e) &#123;</div><div class="line">		e.printStackTrace();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="结束线程"><a href="#结束线程" class="headerlink" title="结束线程"></a>结束线程</h2><h2 id="wait-与-sleep"><a href="#wait-与-sleep" class="headerlink" title="wait 与 sleep"></a>wait 与 sleep</h2><p>sleep 会使得当前线程休眠一段时间，但并不会释放已经得到的锁。</p>
 <p>wait 会阻塞住，并释放已经得到的锁。一直到有人调用 notify 或者 notifyAll，它会重新尝试得到锁，然后再唤醒。</p>
@@ -523,7 +523,7 @@
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
+               src="/images/touxiang.jpg"
                alt="dankan108" />
           <p class="site-author-name" itemprop="name">dankan108</p>
            

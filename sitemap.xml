@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2017/05/05/2014-09-20-java-concurrency/</loc>
+    
+    <lastmod>2017-05-05T14:57:02.882Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2017/05/05/postname/</loc>
     
     <lastmod>2017-05-05T12:34:37.057Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>http://yoursite.com/2017/05/05/hello-world/</loc>
     
     <lastmod>2017-05-05T09:18:44.332Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/05/05/2014-09-20-java-concurrency/</loc>
-    
-    <lastmod>2017-05-05T06:34:44.565Z</lastmod>
     
   </url>
   
