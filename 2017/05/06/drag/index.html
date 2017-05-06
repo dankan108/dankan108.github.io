@@ -72,7 +72,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="html," />
+  <meta name="keywords" content="javascript," />
 
 
 
@@ -90,19 +90,17 @@
 
 
 
-<meta name="description" content="今天看了一个搜索栏的网页，简单研究下使用div form 包裹input 和button html代码如下123456&amp;lt;div class=&quot;search bar1&quot;&amp;gt;    &amp;lt;form action=&quot;&quot;&amp;gt;        &amp;lt;input type=&quot;text&quot; placeholder=&quot;shuru&quot;&amp;gt;        &amp;lt;button&amp;gt;搜索&amp;lt;/bu">
-<meta name="keywords" content="html">
+<meta name="description" content="html对拖拽对象添加 position:absolute; 面向对象的拖拽js12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849function Drag()&amp;#123;    this.obj = null;    this.disX = 0;    this.dis">
+<meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="search框的css写法">
-<meta property="og:url" content="http://yoursite.com/2017/05/06/search/index.html">
+<meta property="og:title" content="面向对象的拖拽 第一种">
+<meta property="og:url" content="http://yoursite.com/2017/05/06/drag/index.html">
 <meta property="og:site_name" content="dankan108">
-<meta property="og:description" content="今天看了一个搜索栏的网页，简单研究下使用div form 包裹input 和button html代码如下123456&amp;lt;div class=&quot;search bar1&quot;&amp;gt;    &amp;lt;form action=&quot;&quot;&amp;gt;        &amp;lt;input type=&quot;text&quot; placeholder=&quot;shuru&quot;&amp;gt;        &amp;lt;button&amp;gt;搜索&amp;lt;/bu">
-<meta property="og:image" content="http://yoursite.com/img/searchbar.png">
-<meta property="og:updated_time" content="2017-05-06T11:06:46.941Z">
+<meta property="og:description" content="html对拖拽对象添加 position:absolute; 面向对象的拖拽js12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849function Drag()&amp;#123;    this.obj = null;    this.disX = 0;    this.dis">
+<meta property="og:updated_time" content="2017-05-06T13:56:24.748Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="search框的css写法">
-<meta name="twitter:description" content="今天看了一个搜索栏的网页，简单研究下使用div form 包裹input 和button html代码如下123456&amp;lt;div class=&quot;search bar1&quot;&amp;gt;    &amp;lt;form action=&quot;&quot;&amp;gt;        &amp;lt;input type=&quot;text&quot; placeholder=&quot;shuru&quot;&amp;gt;        &amp;lt;button&amp;gt;搜索&amp;lt;/bu">
-<meta name="twitter:image" content="http://yoursite.com/img/searchbar.png">
+<meta name="twitter:title" content="面向对象的拖拽 第一种">
+<meta name="twitter:description" content="html对拖拽对象添加 position:absolute; 面向对象的拖拽js12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849function Drag()&amp;#123;    this.obj = null;    this.disX = 0;    this.dis">
 
 
 
@@ -130,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/05/06/search/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/05/06/drag/"/>
 
 
 
 
 
-  <title>search框的css写法 | dankan108</title>
+  <title>面向对象的拖拽 第一种 | dankan108</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -289,7 +287,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/06/search/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/06/drag/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="dankan108">
@@ -306,7 +304,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">search框的css写法</h1>
+          <h1 class="post-title" itemprop="name headline">面向对象的拖拽 第一种</h1>
         
 
         <div class="post-meta">
@@ -318,7 +316,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-06T18:35:10+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-06T19:24:03+08:00">
                 2017-05-06
               </time>
             
@@ -353,14 +351,9 @@
       
 
       
-        <p>今天看了一个搜索栏的网页，简单研究下<br>使用<code>div</code> <code>form</code> 包裹<code>input</code> 和<code>button</code></p>
-<h3 id="html代码如下"><a href="#html代码如下" class="headerlink" title="html代码如下"></a>html代码如下</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"search bar1"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">""</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">placeholder</span>=<span class="string">"shuru"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">button</span>&gt;</span>搜索<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="对原样式进行清除"><a href="#对原样式进行清除" class="headerlink" title="对原样式进行清除"></a>对原样式进行清除</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">*&#123;<span class="attribute">box-sizing</span>: border-box;<span class="attribute">margin</span>: <span class="number">0</span>;<span class="attribute">padding</span>: <span class="number">0</span>;&#125;</div><div class="line"><span class="selector-class">.search</span>&#123;<span class="attribute">padding</span>: <span class="number">30px</span> <span class="number">0</span>;&#125;</div><div class="line"><span class="selector-tag">form</span>&#123;<span class="attribute">position</span>: relative;<span class="attribute">width</span>: <span class="number">300px</span>;<span class="attribute">margin</span>: <span class="number">0</span> auto;&#125;</div><div class="line"><span class="selector-tag">input</span>,<span class="selector-tag">button</span>&#123;<span class="attribute">border</span>: none;<span class="attribute">outline</span>: none;&#125;</div><div class="line"><span class="selector-tag">input</span>&#123;<span class="attribute">width</span>: <span class="number">300px</span>;<span class="attribute">height</span>: <span class="number">42px</span>;<span class="attribute">padding-left</span>: <span class="number">13px</span>&#125;</div><div class="line"><span class="selector-tag">button</span>&#123;<span class="attribute">height</span>: <span class="number">42px</span>;<span class="attribute">width</span>: <span class="number">62px</span>;<span class="attribute">cursor</span>: pointer;<span class="attribute">position</span>: absolute;&#125;</div></pre></td></tr></table></figure>
-<a id="more"></a>
-<h3 id="设置样式"><a href="#设置样式" class="headerlink" title="设置样式"></a>设置样式</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.bar1</span>&#123;<span class="attribute">background</span>:<span class="number">#a3d0c3</span>;&#125;</div><div class="line"><span class="selector-class">.bar1</span> <span class="selector-tag">input</span>&#123;<span class="attribute">border</span>:<span class="number">2px</span> solid <span class="number">#7ba7ab</span>;<span class="attribute">border-radius</span>:<span class="number">5px</span>;<span class="attribute">background</span>: <span class="number">#f9f0da</span>;<span class="attribute">color</span>:<span class="number">#9e9c9c</span>;&#125;</div><div class="line"><span class="selector-class">.bar1</span> <span class="selector-tag">button</span>&#123;<span class="attribute">top</span>: <span class="number">0</span>;<span class="attribute">right</span>: <span class="number">0</span>;<span class="attribute">background</span>: <span class="number">#7ba7ab</span>;<span class="attribute">border-radius</span>: <span class="number">0</span> <span class="number">5px</span> <span class="number">5px</span> <span class="number">0</span>;&#125;</div><div class="line"><span class="selector-class">.bar1</span> <span class="selector-tag">button</span><span class="selector-pseudo">:before</span>&#123;</div><div class="line">    <span class="attribute">content</span>:<span class="string">"\f002"</span>;<span class="comment">/*此处引入了fontawesome的css*/</span></div><div class="line">    <span class="attribute">font-family</span>: FontAwesome;</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</div><div class="line">    <span class="attribute">color</span>:black;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>引入 font-awesome <code>&lt;link href=&quot;http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css&quot; rel=&quot;stylesheet&quot;&gt;</code></p>
-<h3 id="源码地址"><a href="#源码地址" class="headerlink" title="源码地址"></a>源码地址</h3><p><a href="https://github.com/dankan108/webpage-collect/blob/master/search/searchbar.html" target="_blank" rel="external">https://github.com/dankan108/webpage-collect/blob/master/search/searchbar.html</a></p>
-<h3 id="截图"><a href="#截图" class="headerlink" title="截图"></a>截图</h3><p><img src="/img/searchbar.png" alt=""></p>
+        <h3 id="html"><a href="#html" class="headerlink" title="html"></a>html</h3><p>对拖拽对象添加 <span style="color: blue">position:absolute;</span></p>
+<h3 id="面向对象的拖拽js"><a href="#面向对象的拖拽js" class="headerlink" title="面向对象的拖拽js"></a>面向对象的拖拽js</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Drag</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.obj = <span class="literal">null</span>;</div><div class="line">    <span class="keyword">this</span>.disX = <span class="number">0</span>;</div><div class="line">    <span class="keyword">this</span>.disY = <span class="number">0</span>;</div><div class="line">    </div><div class="line">    <span class="keyword">this</span>.settings = &#123;   <span class="comment">//默认参数</span></div><div class="line">        toDown : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;,</div><div class="line">        <span class="attr">toUp</span> : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">    &#125;;</div><div class="line">    </div><div class="line">&#125;</div><div class="line">Drag.prototype.init = <span class="function"><span class="keyword">function</span>(<span class="params">opt</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> This = <span class="keyword">this</span>;</div><div class="line">    <span class="keyword">this</span>.obj = <span class="built_in">document</span>.getElementById(opt.id);</div><div class="line">    extend( <span class="keyword">this</span>.settings , opt );</div><div class="line">    <span class="keyword">this</span>.obj.onmousedown = <span class="function"><span class="keyword">function</span>(<span class="params">ev</span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> ev = ev || <span class="built_in">window</span>.event;</div><div class="line">        This.fnDown(ev);</div><div class="line">        This.settings.toDown();</div><div class="line">        <span class="built_in">document</span>.onmousemove = <span class="function"><span class="keyword">function</span>(<span class="params">ev</span>)</span>&#123;</div><div class="line">            <span class="keyword">var</span> ev = ev || <span class="built_in">window</span>.event;</div><div class="line">            This.fnMove(ev);</div><div class="line">        &#125;;</div><div class="line">        <span class="built_in">document</span>.onmouseup = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            This.fnUp();</div><div class="line">            This.settings.toUp();</div><div class="line">        &#125;;</div><div class="line">        <span class="keyword">return</span> <span class="literal">false</span>;<span class="comment">//阻止默认事件</span></div><div class="line">    &#125;;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">Drag.prototype.fnDown = <span class="function"><span class="keyword">function</span>(<span class="params">ev</span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.disX = ev.clientX - <span class="keyword">this</span>.obj.offsetLeft;</div><div class="line">    <span class="keyword">this</span>.disY = ev.clientY - <span class="keyword">this</span>.obj.offsetTop;</div><div class="line">&#125;;</div><div class="line">Drag.prototype.fnMove = <span class="function"><span class="keyword">function</span>(<span class="params">ev</span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.obj.style.left = ev.clientX - <span class="keyword">this</span>.disX + <span class="string">'px'</span>;</div><div class="line">    <span class="keyword">this</span>.obj.style.top = ev.clientY - <span class="keyword">this</span>.disY + <span class="string">'px'</span>;</div><div class="line">&#125;;</div><div class="line">Drag.prototype.fnUp = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">document</span>.onmousemove = <span class="literal">null</span>;</div><div class="line">    <span class="built_in">document</span>.onmouseup = <span class="literal">null</span>;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">extend</span>(<span class="params">obj1,obj2</span>)</span>&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> attr <span class="keyword">in</span> obj2)&#123;</div><div class="line">        obj1[attr] = obj2[attr];</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="调用"><a href="#调用" class="headerlink" title="调用"></a>调用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var d2 = new Drag();</div><div class="line">d2.init(&#123;   //配置参数</div><div class="line">    id : &apos;div2&apos;,</div><div class="line">    toDown : function()&#123;</div><div class="line">        document.title = &apos;hello&apos;;</div><div class="line">        document.body.style.background = &apos;black&apos;;</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -390,7 +383,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/html/" rel="tag"># html</a>
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
           
         </div>
       
@@ -403,8 +396,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/05/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2017/05/06/search/" rel="next" title="search框的css写法">
+                <i class="fa fa-chevron-left"></i> search框的css写法
               </a>
             
           </div>
@@ -413,8 +406,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/05/06/drag/" rel="prev" title="面向对象的拖拽 第一种">
-                面向对象的拖拽 第一种 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/05/06/drag2/" rel="prev" title="面向对象的拖拽 第二种">
+                面向对象的拖拽 第二种 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -542,7 +535,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#html代码如下"><span class="nav-number">1.</span> <span class="nav-text">html代码如下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对原样式进行清除"><span class="nav-number">2.</span> <span class="nav-text">对原样式进行清除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置样式"><span class="nav-number">3.</span> <span class="nav-text">设置样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#源码地址"><span class="nav-number">4.</span> <span class="nav-text">源码地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#截图"><span class="nav-number">5.</span> <span class="nav-text">截图</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#html"><span class="nav-number">1.</span> <span class="nav-text">html</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#面向对象的拖拽js"><span class="nav-number">2.</span> <span class="nav-text">面向对象的拖拽js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#调用"><span class="nav-number">3.</span> <span class="nav-text">调用</span></a></li></ol></div>
             
 
           </div>
