@@ -1302,7 +1302,6 @@ pre .javascript .function {
 }
 .posts-collapse .post-title a {
   color: #666;
-  color: #166bec;
   border-bottom: none;
 }
 .page-home .post-type-quote .post-header,
@@ -1700,7 +1699,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fff9b3;
+  background: #fff98b;
 }
 .links-of-blogroll {
   font-size: 13px;

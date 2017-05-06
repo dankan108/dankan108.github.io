@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-05-05T09:18:44.332Z</updated>
+  <updated>2017-05-06T11:06:46.941Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>search框的css写法</title>
+    <link href="http://yoursite.com/2017/05/06/search/"/>
+    <id>http://yoursite.com/2017/05/06/search/</id>
+    <published>2017-05-06T10:35:10.000Z</published>
+    <updated>2017-05-06T11:06:46.941Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天看了一个搜索栏的网页，简单研究下<br>使用<code>div</code> <code>form</code> 包裹<code>input</code> 和<code>button</code></p>
+<h3 id="html代码如下"><a href="#html代码如下" class="headerlink" title="html代码如下"></a>html代码如下</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"search bar1"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">""</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">placeholder</span>=<span class="string">"shuru"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">button</span>&gt;</span>搜索<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="对原样式进行清除"><a href="#对原样式进行清除" class="headerlink" title="对原样式进行清除"></a>对原样式进行清除</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">*&#123;<span class="attribute">box-sizing</span>: border-box;<span class="attribute">margin</span>: <span class="number">0</span>;<span class="attribute">padding</span>: <span class="number">0</span>;&#125;</div><div class="line"><span class="selector-class">.search</span>&#123;<span class="attribute">padding</span>: <span class="number">30px</span> <span class="number">0</span>;&#125;</div><div class="line"><span class="selector-tag">form</span>&#123;<span class="attribute">position</span>: relative;<span class="attribute">width</span>: <span class="number">300px</span>;<span class="attribute">margin</span>: <span class="number">0</span> auto;&#125;</div><div class="line"><span class="selector-tag">input</span>,<span class="selector-tag">button</span>&#123;<span class="attribute">border</span>: none;<span class="attribute">outline</span>: none;&#125;</div><div class="line"><span class="selector-tag">input</span>&#123;<span class="attribute">width</span>: <span class="number">300px</span>;<span class="attribute">height</span>: <span class="number">42px</span>;<span class="attribute">padding-left</span>: <span class="number">13px</span>&#125;</div><div class="line"><span class="selector-tag">button</span>&#123;<span class="attribute">height</span>: <span class="number">42px</span>;<span class="attribute">width</span>: <span class="number">62px</span>;<span class="attribute">cursor</span>: pointer;<span class="attribute">position</span>: absolute;&#125;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="设置样式"><a href="#设置样式" class="headerlink" title="设置样式"></a>设置样式</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.bar1</span>&#123;<span class="attribute">background</span>:<span class="number">#a3d0c3</span>;&#125;</div><div class="line"><span class="selector-class">.bar1</span> <span class="selector-tag">input</span>&#123;<span class="attribute">border</span>:<span class="number">2px</span> solid <span class="number">#7ba7ab</span>;<span class="attribute">border-radius</span>:<span class="number">5px</span>;<span class="attribute">background</span>: <span class="number">#f9f0da</span>;<span class="attribute">color</span>:<span class="number">#9e9c9c</span>;&#125;</div><div class="line"><span class="selector-class">.bar1</span> <span class="selector-tag">button</span>&#123;<span class="attribute">top</span>: <span class="number">0</span>;<span class="attribute">right</span>: <span class="number">0</span>;<span class="attribute">background</span>: <span class="number">#7ba7ab</span>;<span class="attribute">border-radius</span>: <span class="number">0</span> <span class="number">5px</span> <span class="number">5px</span> <span class="number">0</span>;&#125;</div><div class="line"><span class="selector-class">.bar1</span> <span class="selector-tag">button</span><span class="selector-pseudo">:before</span>&#123;</div><div class="line">    <span class="attribute">content</span>:<span class="string">"\f002"</span>;<span class="comment">/*此处引入了fontawesome的css*/</span></div><div class="line">    <span class="attribute">font-family</span>: FontAwesome;</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</div><div class="line">    <span class="attribute">color</span>:black;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>引入 font-awesome <code>&lt;link href=&quot;http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css&quot; rel=&quot;stylesheet&quot;&gt;</code></p>
+<h3 id="源码地址"><a href="#源码地址" class="headerlink" title="源码地址"></a>源码地址</h3><p><a href="https://github.com/dankan108/webpage-collect/blob/master/search/searchbar.html" target="_blank" rel="external">https://github.com/dankan108/webpage-collect/blob/master/search/searchbar.html</a></p>
+<h3 id="截图"><a href="#截图" class="headerlink" title="截图"></a>截图</h3><p><img src="/img/searchbar.png" alt=""></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天看了一个搜索栏的网页，简单研究下&lt;br&gt;使用&lt;code&gt;div&lt;/code&gt; &lt;code&gt;form&lt;/code&gt; 包裹&lt;code&gt;input&lt;/code&gt; 和&lt;code&gt;button&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&quot;html代码如下&quot;&gt;&lt;a href=&quot;#html代码如下&quot; class=&quot;headerlink&quot; title=&quot;html代码如下&quot;&gt;&lt;/a&gt;html代码如下&lt;/h3&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;search bar1&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;form&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;action&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;text&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;placeholder&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;shuru&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;button&lt;/span&gt;&amp;gt;&lt;/span&gt;搜索&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;button&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;form&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;对原样式进行清除&quot;&gt;&lt;a href=&quot;#对原样式进行清除&quot; class=&quot;headerlink&quot; title=&quot;对原样式进行清除&quot;&gt;&lt;/a&gt;对原样式进行清除&lt;/h3&gt;&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;*&amp;#123;&lt;span class=&quot;attribute&quot;&gt;box-sizing&lt;/span&gt;: border-box;&lt;span class=&quot;attribute&quot;&gt;margin&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;span class=&quot;attribute&quot;&gt;padding&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;selector-class&quot;&gt;.search&lt;/span&gt;&amp;#123;&lt;span class=&quot;attribute&quot;&gt;padding&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;30px&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;form&lt;/span&gt;&amp;#123;&lt;span class=&quot;attribute&quot;&gt;position&lt;/span&gt;: relative;&lt;span class=&quot;attribute&quot;&gt;width&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;300px&lt;/span&gt;;&lt;span class=&quot;attribute&quot;&gt;margin&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; auto;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;input&lt;/span&gt;,&lt;span class=&quot;selector-tag&quot;&gt;button&lt;/span&gt;&amp;#123;&lt;span class=&quot;attribute&quot;&gt;border&lt;/span&gt;: none;&lt;span class=&quot;attribute&quot;&gt;outline&lt;/span&gt;: none;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;input&lt;/span&gt;&amp;#123;&lt;span class=&quot;attribute&quot;&gt;width&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;300px&lt;/span&gt;;&lt;span class=&quot;attribute&quot;&gt;height&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;42px&lt;/span&gt;;&lt;span class=&quot;attribute&quot;&gt;padding-left&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;13px&lt;/span&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;button&lt;/span&gt;&amp;#123;&lt;span class=&quot;attribute&quot;&gt;height&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;42px&lt;/span&gt;;&lt;span class=&quot;attribute&quot;&gt;width&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;62px&lt;/span&gt;;&lt;span class=&quot;attribute&quot;&gt;cursor&lt;/span&gt;: pointer;&lt;span class=&quot;attribute&quot;&gt;position&lt;/span&gt;: absolute;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="html" scheme="http://yoursite.com/tags/html/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
@@ -43,116 +73,11 @@
   </entry>
   
   <entry>
-    <title>Java 中的并发</title>
-    <link href="http://yoursite.com/2017/05/05/2014-09-20-java-concurrency/"/>
-    <id>http://yoursite.com/2017/05/05/2014-09-20-java-concurrency/</id>
-    <published>2017-05-05T14:10:02.106Z</published>
-    <updated>2017-05-05T14:57:02.882Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="如何创建一个线程"><a href="#如何创建一个线程" class="headerlink" title="如何创建一个线程"></a>如何创建一个线程</h2><p>按 Java 语言规范中的说法，创建线程只有一种方式，就是创建一个 Thread 对象。而从 HotSpot 虚拟机的角度看，创建一个虚拟机线程<br>有两种方式，一种是创建 Thread 对象，另一种是创建 一个本地线程，加入到虚拟机线程中。</p>
-<p>如果从 Java 语法的角度。有两种方法。</p>
-<p>第一是继承 Thread 类，实现 run 方法，并创建子类对象。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">startThreadUseSubClass</span><span class="params">()</span> </span>&#123;</div><div class="line">	<span class="class"><span class="keyword">class</span> <span class="title">MyThread</span> <span class="keyword">extends</span> <span class="title">Thread</span> </span>&#123;</div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</div><div class="line">			System.out.println(<span class="string">"start thread using Subclass of Thread"</span>);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	MyThread thread = <span class="keyword">new</span> MyThread();</div><div class="line">	thread.start();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>另一种是传递给 Thread 构造函数一个 Runnable 对象。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">startThreadUseRunnalbe</span><span class="params">()</span> </span>&#123;</div><div class="line">	Thread thread = <span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable() &#123;</div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</div><div class="line">			System.out.println(<span class="string">"start thread using runnable"</span>);</div><div class="line">		&#125;</div><div class="line">	&#125;);</div><div class="line">	thread.start();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>当然， Runnalbe 对象，也不是只有这一种形式，例如如果我们想要线程执行时返回一个值，就需要用到另一种 Runnalbe 对象，它<br>对原来的 Runnalbe 对象进行了包装。<br><a id="more"></a></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">startFutureTask</span><span class="params">()</span> </span>&#123;</div><div class="line">	FutureTask&lt;Integer&gt; task = <span class="keyword">new</span> FutureTask&lt;&gt;(<span class="keyword">new</span> Callable&lt;Integer&gt;() &#123;</div><div class="line">		<span class="function"><span class="keyword">public</span> Integer <span class="title">call</span><span class="params">()</span> </span>&#123;</div><div class="line">			<span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">		&#125;</div><div class="line">	&#125;);</div><div class="line"></div><div class="line">	<span class="keyword">new</span> Thread(task).start();</div><div class="line"></div><div class="line">	<span class="keyword">try</span> &#123;</div><div class="line">		Integer result = task.get();</div><div class="line">		System.out.println(<span class="string">"future result "</span> + result);</div><div class="line">	&#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</div><div class="line">		e.printStackTrace();</div><div class="line">	&#125; <span class="keyword">catch</span> (ExecutionException e) &#123;</div><div class="line">		e.printStackTrace();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="结束线程"><a href="#结束线程" class="headerlink" title="结束线程"></a>结束线程</h2><h2 id="wait-与-sleep"><a href="#wait-与-sleep" class="headerlink" title="wait 与 sleep"></a>wait 与 sleep</h2><p>sleep 会使得当前线程休眠一段时间，但并不会释放已经得到的锁。</p>
-<p>wait 会阻塞住，并释放已经得到的锁。一直到有人调用 notify 或者 notifyAll，它会重新尝试得到锁，然后再唤醒。</p>
-<h2 id="线程池"><a href="#线程池" class="headerlink" title="线程池"></a>线程池</h2><h3 id="好处"><a href="#好处" class="headerlink" title="好处"></a>好处</h3><ul>
-<li>复用</li>
-</ul>
-<p>线程池中有一系列线程，这些线程在执行完任务后，并不会被销毁，而会从任务队列中取出任务，执行这些任务。这样，就避免为每个任务<br>都创建线程，销毁线程。 在有大量短命线程的场景下，如果创建线程和销毁线程的时间比线程执行任务的时间还长，显然是不划算的，这时候，使用线程池就会有明显<br>的好处。</p>
-<ul>
-<li>流控</li>
-</ul>
-<p>同时，可以设置线程数目，这样，线程不会增大到影响系统整体性能的程度。当任务太多时，可以在队列中排队，<br>如果有空闲线程，他们会从队列中取出任务执行。</p>
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><ul>
-<li>线程数目</li>
-</ul>
-<p>那么，线程的数目要设置成多少呢？这需要根据任务类型的不同来设置，假如是大量计算型的任务，他们不会阻塞，那么可以将线程数目设置<br>为处理器数目。而如果任务中涉及大量IO，有些线程会阻塞住，这样就要根据阻塞线程数目与运行线程数目的比例，以及处理器数目来设置<br>线程总数目。例如阻塞线程数目与运行线程数目之比为n, 处理器数目为p，那么可以设置 n * (p + 1) 个线程，保证有 n 个线程处于运行<br>状态。</p>
-<ul>
-<li>Executors</li>
-</ul>
-<p>JDK 的 java.util.concurrent.Executors 类提供了几个静态的方法，用于创建不同类型的线程池。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">ExecutorService service = Executors.newFixedThreadPool(<span class="number">10</span>);</div><div class="line">ArrayList&lt;Future&lt;Integer&gt;&gt; results = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">14</span>; i++) &#123;</div><div class="line">	Future&lt;Integer&gt; r = service.submit(<span class="keyword">new</span> Callable&lt;Integer&gt;() &#123;</div><div class="line">		<span class="function"><span class="keyword">public</span> Integer <span class="title">call</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> <span class="keyword">new</span> Random().nextInt();</div><div class="line">	&#125;);</div><div class="line">	results.add(r);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><code>newFixedThreadPool</code> 可以创建固定数目的线程，一旦创建不会自动销毁线程，即便长期没有任务。除非显式关闭线程池。如果任务队列中有任务，就取出任务执行。</p>
-<p>另外，还可以使用 <code>newCachedThreadPool</code> 方法创建一个不设定固定线程数目的线程池，它有一个特性，线程完成任务后，如果一分钟之内又有新任务，就会复用这个线程执行新任务。如果超过一分钟还没有任务执行，就会自动销毁。</p>
-<p>另外，还提供了 <code>newSingleThreadExecutor</code> 创建有一个工作线程的线程池。</p>
-<h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>JDK 中的线程池通过 HashSet 存储工作者线程，通过 BlockingQueue 来存储待处理任务。</p>
-<p>通过核心工作者数目(corePoolSize) 和 最大工作者数目(maximumPoolSize) 来确定如何处理任务。如果当前工作者线程数目<br>小于核心工作者数目，则创建一个工作者线程执行这个任务。否则，将这个任务放入待处理队列。如果入队失败，再看看当前工作<br>者数目是不是小于最大工作者数目，如果小于，则创建工作者线程执行这个任务。否则，拒绝执行这个任务。</p>
-<p>另外，如果待处理队列中没有任务要处理，并且工作者线程数目超过了核心工作者数目，那么，需要减少工作者线程数目。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;如何创建一个线程&quot;&gt;&lt;a href=&quot;#如何创建一个线程&quot; class=&quot;headerlink&quot; title=&quot;如何创建一个线程&quot;&gt;&lt;/a&gt;如何创建一个线程&lt;/h2&gt;&lt;p&gt;按 Java 语言规范中的说法，创建线程只有一种方式，就是创建一个 Thread 对象。而从 HotSpot 虚拟机的角度看，创建一个虚拟机线程&lt;br&gt;有两种方式，一种是创建 Thread 对象，另一种是创建 一个本地线程，加入到虚拟机线程中。&lt;/p&gt;
-&lt;p&gt;如果从 Java 语法的角度。有两种方法。&lt;/p&gt;
-&lt;p&gt;第一是继承 Thread 类，实现 run 方法，并创建子类对象。&lt;/p&gt;
-&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;startThreadUseSubClass&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;MyThread&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Thread&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;		&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;			System.out.println(&lt;span class=&quot;string&quot;&gt;&quot;start thread using Subclass of Thread&quot;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;		&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	MyThread thread = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; MyThread();&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	thread.start();&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;另一种是传递给 Thread 构造函数一个 Runnable 对象。&lt;/p&gt;
-&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;startThreadUseRunnalbe&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	Thread thread = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Thread(&lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Runnable() &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;		&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;			System.out.println(&lt;span class=&quot;string&quot;&gt;&quot;start thread using runnable&quot;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;		&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&amp;#125;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	thread.start();&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;当然， Runnalbe 对象，也不是只有这一种形式，例如如果我们想要线程执行时返回一个值，就需要用到另一种 Runnalbe 对象，它&lt;br&gt;对原来的 Runnalbe 对象进行了包装。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>aa</title>
-    <link href="http://yoursite.com/2017/05/05/aa/"/>
-    <id>http://yoursite.com/2017/05/05/aa/</id>
-    <published>2017-05-05T10:04:10.000Z</published>
-    <updated>2017-05-05T15:21:05.201Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="aa"><a href="#aa" class="headerlink" title="aa"></a>aa</h2><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;aa&quot;&gt;&lt;a href=&quot;#aa&quot; class=&quot;headerlink&quot; title=&quot;aa&quot;&gt;&lt;/a&gt;aa&lt;/h2&gt;&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;H
-    
-    </summary>
-    
-      <category term="ssaa" scheme="http://yoursite.com/categories/ssaa/"/>
-    
-    
-      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>postname</title>
-    <link href="http://yoursite.com/2017/05/05/postname/"/>
-    <id>http://yoursite.com/2017/05/05/postname/</id>
-    <published>2017-05-05T10:04:10.000Z</published>
-    <updated>2017-05-05T12:34:37.057Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="dd"><a href="#dd" class="headerlink" title="dd"></a>dd</h2><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.<br><img src="/img/1.jpg" alt=""></p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;dd&quot;&gt;&lt;a href=&quot;#dd&quot; class=&quot;headerlink&quot; title=&quot;dd&quot;&gt;&lt;/a&gt;dd&lt;/h2&gt;&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;H
-    
-    </summary>
-    
-      <category term="ss" scheme="http://yoursite.com/categories/ss/"/>
-    
-    
-      <category term="aa" scheme="http://yoursite.com/tags/aa/"/>
-    
-  </entry>
-  
-  <entry>
     <title>马克飞象</title>
     <link href="http://yoursite.com/2017/05/05/wode/"/>
     <id>http://yoursite.com/2017/05/05/wode/</id>
     <published>2017-05-05T10:04:10.000Z</published>
-    <updated>2017-05-05T15:30:05.551Z</updated>
+    <updated>2017-05-06T11:10:13.832Z</updated>
     
     <content type="html"><![CDATA[<h1 id="欢迎使用马克飞象"><a href="#欢迎使用马克飞象" class="headerlink" title="欢迎使用马克飞象"></a>欢迎使用马克飞象</h1><p>@(示例笔记本)[马克飞象|帮助|Markdown]</p>
 <p><strong>马克飞象</strong>是一款专为印象笔记（Evernote）打造的Markdown编辑器，通过精心的设计与技术实现，配合印象笔记强大的存储和同步功能，带来前所未有的书写体验。特点概述：</p>
@@ -232,7 +157,7 @@
 <h2 id="关于收费"><a href="#关于收费" class="headerlink" title="关于收费"></a>关于收费</h2><p><strong>马克飞象</strong>为新用户提供 10 天的试用期，试用期过后需要<a href="maxiang.info/vip.html">续费</a>才能继续使用。未购买或者未及时续费，将不能同步新的笔记。之前保存过的笔记依然可以编辑。</p>
 <h2 id="反馈与建议"><a href="#反馈与建议" class="headerlink" title="反馈与建议"></a>反馈与建议</h2><ul>
 <li>微博：<a href="http://weibo.com/u/2788354117" target="_blank" rel="external">@马克飞象</a>，<a href="http://weibo.com/ggock" title="开发者个人账号" target="_blank" rel="external">@GGock</a></li>
-<li>邮箱：<a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#111;&#58;&#104;&#117;&#115;&#116;&#103;&#111;&#x63;&#107;&#x40;&#103;&#109;&#x61;&#105;&#108;&#x2e;&#x63;&#x6f;&#109;">&#104;&#117;&#115;&#116;&#103;&#111;&#x63;&#107;&#x40;&#103;&#109;&#x61;&#105;&#108;&#x2e;&#x63;&#x6f;&#109;</a></li>
+<li>邮箱：<a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#x3a;&#104;&#117;&#115;&#x74;&#x67;&#111;&#x63;&#x6b;&#64;&#x67;&#x6d;&#x61;&#105;&#108;&#x2e;&#x63;&#x6f;&#109;">&#104;&#117;&#115;&#x74;&#x67;&#111;&#x63;&#x6b;&#64;&#x67;&#x6d;&#x61;&#105;&#108;&#x2e;&#x63;&#x6f;&#109;</a></li>
 </ul>
 <hr>
 <p>感谢阅读这份帮助文档。请点击右上角，绑定印象笔记账号，开启全新的记录与分享体验吧。</p>
@@ -251,8 +176,6 @@
 &lt;hr&gt;
     
     </summary>
-    
-      <category term="markdown" scheme="http://yoursite.com/categories/markdown/"/>
     
     
       <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
