@@ -72,7 +72,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="javascript," />
+  <meta name="keywords" content="ejs," />
 
 
 
@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="html对拖拽对象添加 position:absolute; 调用12345678var d2 = new Drag();d2.init(&amp;#123;   //配置参数    id : &apos;div2&apos;,    toDown : function()&amp;#123;        document.title = &apos;hello&apos;;        document.body.style.background">
-<meta name="keywords" content="javascript">
+<meta name="description" content="ejs模板引入文件12&amp;lt;script src=&quot;./bower_components/jquery/dist/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script src=&quot;./bower_components/ejs/ejs.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;">
+<meta name="keywords" content="ejs">
 <meta property="og:type" content="article">
-<meta property="og:title" content="面向对象的拖拽 第一种">
-<meta property="og:url" content="http://yoursite.com/2017/05/06/drag/index.html">
+<meta property="og:title" content="ejs在客户端使用">
+<meta property="og:url" content="http://yoursite.com/2017/05/07/ejs/index.html">
 <meta property="og:site_name" content="dankan108">
-<meta property="og:description" content="html对拖拽对象添加 position:absolute; 调用12345678var d2 = new Drag();d2.init(&amp;#123;   //配置参数    id : &apos;div2&apos;,    toDown : function()&amp;#123;        document.title = &apos;hello&apos;;        document.body.style.background">
-<meta property="og:updated_time" content="2017-05-07T06:36:30.228Z">
+<meta property="og:description" content="ejs模板引入文件12&amp;lt;script src=&quot;./bower_components/jquery/dist/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script src=&quot;./bower_components/ejs/ejs.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;">
+<meta property="og:updated_time" content="2017-05-07T12:00:39.246Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="面向对象的拖拽 第一种">
-<meta name="twitter:description" content="html对拖拽对象添加 position:absolute; 调用12345678var d2 = new Drag();d2.init(&amp;#123;   //配置参数    id : &apos;div2&apos;,    toDown : function()&amp;#123;        document.title = &apos;hello&apos;;        document.body.style.background">
+<meta name="twitter:title" content="ejs在客户端使用">
+<meta name="twitter:description" content="ejs模板引入文件12&amp;lt;script src=&quot;./bower_components/jquery/dist/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script src=&quot;./bower_components/ejs/ejs.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/05/06/drag/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/05/07/ejs/"/>
 
 
 
 
 
-  <title>面向对象的拖拽 第一种 | dankan108</title>
+  <title>ejs在客户端使用 | dankan108</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -287,7 +287,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/06/drag/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/07/ejs/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="dankan108">
@@ -304,7 +304,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">面向对象的拖拽 第一种</h1>
+          <h1 class="post-title" itemprop="name headline">ejs在客户端使用</h1>
         
 
         <div class="post-meta">
@@ -316,8 +316,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-06T19:24:03+08:00">
-                2017-05-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-07T19:46:21+08:00">
+                2017-05-07
               </time>
             
 
@@ -351,11 +351,12 @@
       
 
       
-        <h3 id="html"><a href="#html" class="headerlink" title="html"></a>html</h3><p>对拖拽对象添加 <span style="color: blue">position:absolute;</span></p>
-<h3 id="调用"><a href="#调用" class="headerlink" title="调用"></a>调用</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> d2 = <span class="keyword">new</span> Drag();</div><div class="line">d2.init(&#123;   <span class="comment">//配置参数</span></div><div class="line">    id : <span class="string">'div2'</span>,</div><div class="line">    <span class="attr">toDown</span> : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="built_in">document</span>.title = <span class="string">'hello'</span>;</div><div class="line">        <span class="built_in">document</span>.body.style.background = <span class="string">'black'</span>;</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+        <h3 id="ejs模板"><a href="#ejs模板" class="headerlink" title="ejs模板"></a>ejs模板</h3><p>引入文件<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./bower_components/jquery/dist/jquery.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./bower_components/ejs/ejs.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <a id="more"></a>
-<h3 id="面向对象的拖拽js"><a href="#面向对象的拖拽js" class="headerlink" title="面向对象的拖拽js"></a>面向对象的拖拽js</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Drag</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.obj = <span class="literal">null</span>;</div><div class="line">    <span class="keyword">this</span>.disX = <span class="number">0</span>;</div><div class="line">    <span class="keyword">this</span>.disY = <span class="number">0</span>;</div><div class="line">    </div><div class="line">    <span class="keyword">this</span>.settings = &#123;   <span class="comment">//默认参数</span></div><div class="line">        toDown : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;,</div><div class="line">        <span class="attr">toUp</span> : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">    &#125;;</div><div class="line">    </div><div class="line">&#125;</div><div class="line">Drag.prototype.init = <span class="function"><span class="keyword">function</span>(<span class="params">opt</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> This = <span class="keyword">this</span>;</div><div class="line">    <span class="keyword">this</span>.obj = <span class="built_in">document</span>.getElementById(opt.id);</div><div class="line">    extend( <span class="keyword">this</span>.settings , opt );</div><div class="line">    <span class="keyword">this</span>.obj.onmousedown = <span class="function"><span class="keyword">function</span>(<span class="params">ev</span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> ev = ev || <span class="built_in">window</span>.event;</div><div class="line">        This.fnDown(ev);</div><div class="line">        This.settings.toDown();</div><div class="line">        <span class="built_in">document</span>.onmousemove = <span class="function"><span class="keyword">function</span>(<span class="params">ev</span>)</span>&#123;</div><div class="line">            <span class="keyword">var</span> ev = ev || <span class="built_in">window</span>.event;</div><div class="line">            This.fnMove(ev);</div><div class="line">        &#125;;</div><div class="line">        <span class="built_in">document</span>.onmouseup = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            This.fnUp();</div><div class="line">            This.settings.toUp();</div><div class="line">        &#125;;</div><div class="line">        <span class="keyword">return</span> <span class="literal">false</span>;<span class="comment">//阻止默认事件</span></div><div class="line">    &#125;;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">Drag.prototype.fnDown = <span class="function"><span class="keyword">function</span>(<span class="params">ev</span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.disX = ev.clientX - <span class="keyword">this</span>.obj.offsetLeft;</div><div class="line">    <span class="keyword">this</span>.disY = ev.clientY - <span class="keyword">this</span>.obj.offsetTop;</div><div class="line">&#125;;</div><div class="line">Drag.prototype.fnMove = <span class="function"><span class="keyword">function</span>(<span class="params">ev</span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.obj.style.left = ev.clientX - <span class="keyword">this</span>.disX + <span class="string">'px'</span>;</div><div class="line">    <span class="keyword">this</span>.obj.style.top = ev.clientY - <span class="keyword">this</span>.disY + <span class="string">'px'</span>;</div><div class="line">&#125;;</div><div class="line">Drag.prototype.fnUp = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">document</span>.onmousemove = <span class="literal">null</span>;</div><div class="line">    <span class="built_in">document</span>.onmouseup = <span class="literal">null</span>;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">extend</span>(<span class="params">obj1,obj2</span>)</span>&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> attr <span class="keyword">in</span> obj2)&#123;</div><div class="line">        obj1[attr] = obj2[attr];</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="如需给拖拽加限定范围，可以先继承-，在修改方法"><a href="#如需给拖拽加限定范围，可以先继承-，在修改方法" class="headerlink" title="如需给拖拽加限定范围，可以先继承  ，在修改方法"></a>如需给拖拽加限定范围，可以先继承  ，在修改方法</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">ChildDrag</span>(<span class="params">id</span>)</span>&#123;   <span class="comment">//子类</span></div><div class="line">    Drag.call(<span class="keyword">this</span>,id);</div><div class="line">&#125;</div><div class="line"></div><div class="line">extend( ChildDrag.prototype , Drag.prototype );</div><div class="line"></div><div class="line">ChildDrag.prototype.fnMove = <span class="function"><span class="keyword">function</span>(<span class="params">ev</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> L = ev.clientX - <span class="keyword">this</span>.disX;</div><div class="line">    <span class="keyword">var</span> T = ev.clientY - <span class="keyword">this</span>.disY; </div><div class="line">    <span class="keyword">if</span>(L&lt;<span class="number">0</span>)&#123;</div><div class="line">        L = <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(L&gt;<span class="built_in">document</span>.documentElement.clientWidth - <span class="keyword">this</span>.obj.offsetWidth)&#123;</div><div class="line">        L = <span class="built_in">document</span>.documentElement.clientWidth - <span class="keyword">this</span>.obj.offsetWidth;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">this</span>.obj.style.left = L + <span class="string">'px'</span>;</div><div class="line">    <span class="keyword">this</span>.obj.style.top = T + <span class="string">'px'</span>;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>编写主题</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"show"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/html"</span> <span class="attr">id</span>=<span class="string">"module"</span>&gt;</span><span class="javascript"></span></div><div class="line">    &lt;% data.map(<span class="function"><span class="keyword">function</span>(<span class="params">item</span>)</span>&#123; %&gt;</div><div class="line">        <span class="xml"><span class="tag">&lt;<span class="name">h2</span>&gt;</span><span class="tag">&lt;<span class="name">%=item.header%</span>&gt;</span><span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span></div><div class="line">        &lt;p&gt;<span class="xml"><span class="tag">&lt;<span class="name">%=item.paragraph%</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></div><div class="line">    &lt;% &#125;) %&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>渲染json<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> data = [ &#123; <span class="string">"header"</span>:<span class="string">"Hello"</span>, <span class="string">"paragraph"</span>:<span class="string">"This is hello"</span> &#125;, &#123; <span class="string">"header"</span>:<span class="string">"World"</span>, <span class="string">"paragraph"</span>:<span class="string">"This is world"</span> &#125; ,&#123;<span class="string">"header"</span>:<span class="string">"aa"</span>,<span class="string">"paragraph"</span>:<span class="string">"adadasdaaad"</span>&#125;];</div><div class="line"></div><div class="line"><span class="keyword">var</span> html = ejs.render($(<span class="string">"#module"</span>).html(),&#123;<span class="attr">data</span>:data&#125;);</div><div class="line">$(<span class="string">'#show'</span>).append(html);</div></pre></td></tr></table></figure></p>
+<p>ajax<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//-&gt;使用jQuery的AJAX获取数据</span></div><div class="line">    $.ajax(&#123;</div><div class="line">        <span class="attr">url</span>:<span class="string">'/getMenu'</span>,</div><div class="line">        <span class="attr">type</span>:<span class="string">'get'</span>,</div><div class="line">        <span class="attr">dataType</span>:<span class="string">'json'</span>,</div><div class="line">        <span class="attr">success</span>:<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</div><div class="line">            <span class="comment">//-&gt;data:就是我们从服务器获取的数据,然后执行第四步的bindHTML方法</span></div><div class="line">            bindHTML(data);</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    <span class="comment">//-&gt;假设我们获取的数据格式如下</span></div><div class="line">    [</div><div class="line">        &#123;</div><div class="line">            <span class="string">"name"</span>: <span class="string">"NBA"</span>,</div><div class="line">            <span class="string">"tag"</span>: <span class="string">"nba"</span>,</div><div class="line">            <span class="string">"columnId"</span>: <span class="number">100000</span></div><div class="line">        &#125;,</div><div class="line">        &#123;</div><div class="line">            <span class="string">"name"</span>: <span class="string">"欧洲杯"</span>,</div><div class="line">            <span class="string">"tag"</span>: <span class="string">"ec"</span>,</div><div class="line">            <span class="string">"columnId"</span>: <span class="number">3</span></div><div class="line">        &#125;,</div><div class="line">        &#123;</div><div class="line">            <span class="string">"name"</span>: <span class="string">"中超"</span>,</div><div class="line">            <span class="string">"tag"</span>: <span class="string">"csl"</span>,</div><div class="line">            <span class="string">"columnId"</span>: <span class="number">208</span></div><div class="line">        &#125;</div><div class="line">        ...</div><div class="line">    ]</div><div class="line"></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">bindHTML</span>(<span class="params">data</span>)</span>&#123;</div><div class="line">        <span class="comment">//-&gt;首先把页面中模板的innerHTML获取到</span></div><div class="line">        <span class="keyword">var</span> str=$(<span class="string">"#menuTemplate"</span>).html();</div><div class="line"></div><div class="line">        <span class="comment">//-&gt;然后把str和data交给EJS解析处理，得到我们最终想要的字符串</span></div><div class="line">        <span class="keyword">var</span> result=ejs.render(str, &#123;<span class="attr">data</span>: data&#125;);</div><div class="line"></div><div class="line">        <span class="comment">//-&gt;最后把获取的HTML放入到MENU中</span></div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -385,7 +386,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/javascript/" rel="tag"># javascript</a>
+            <a href="/tags/ejs/" rel="tag"># ejs</a>
           
         </div>
       
@@ -398,8 +399,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/06/search/" rel="next" title="search框的css写法">
-                <i class="fa fa-chevron-left"></i> search框的css写法
+              <a href="/2017/05/07/xuanxiangka/" rel="next" title="简单的选项卡组件">
+                <i class="fa fa-chevron-left"></i> 简单的选项卡组件
               </a>
             
           </div>
@@ -407,10 +408,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/05/06/drag2/" rel="prev" title="面向对象的拖拽 第二种">
-                面向对象的拖拽 第二种 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -537,7 +534,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#html"><span class="nav-number">1.</span> <span class="nav-text">html</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#调用"><span class="nav-number">2.</span> <span class="nav-text">调用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#面向对象的拖拽js"><span class="nav-number">3.</span> <span class="nav-text">面向对象的拖拽js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如需给拖拽加限定范围，可以先继承-，在修改方法"><span class="nav-number">4.</span> <span class="nav-text">如需给拖拽加限定范围，可以先继承  ，在修改方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#ejs模板"><span class="nav-number">1.</span> <span class="nav-text">ejs模板</span></a></li></ol></div>
             
 
           </div>

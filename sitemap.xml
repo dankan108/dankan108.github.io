@@ -2,16 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2017/05/07/ejs/</loc>
+    
+    <lastmod>2017-05-07T12:00:39.246Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2017/05/06/drag/</loc>
     
-    <lastmod>2017-05-06T13:56:24.748Z</lastmod>
+    <lastmod>2017-05-07T06:36:30.228Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2017/05/06/drag2/</loc>
     
-    <lastmod>2017-05-06T13:19:26.772Z</lastmod>
+    <lastmod>2017-05-07T06:32:04.603Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/05/07/xuanxiangka/</loc>
+    
+    <lastmod>2017-05-07T06:25:31.818Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/05/07/yuanxinlian/</loc>
+    
+    <lastmod>2017-05-06T23:52:42.808Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/05/07/%E7%BB%A7%E6%89%BF/</loc>
+    
+    <lastmod>2017-05-06T23:29:23.215Z</lastmod>
     
   </url>
   
