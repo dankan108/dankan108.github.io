@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-07-27T15:10:30.336Z</updated>
+  <updated>2017-07-27T15:24:51.559Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,48 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>专注</title>
-    <link href="http://yoursite.com/2017/07/27/%E4%B8%93%E6%B3%A8/"/>
-    <id>http://yoursite.com/2017/07/27/专注/</id>
+    <title>专注02-摆脱干扰</title>
+    <link href="http://yoursite.com/2017/07/27/%E4%B8%93%E6%B3%A802/"/>
+    <id>http://yoursite.com/2017/07/27/专注02/</id>
+    <published>2017-07-27T15:21:37.000Z</published>
+    <updated>2017-07-27T15:24:51.559Z</updated>
+    
+    <content type="html"><![CDATA[<h1 style="color:blue">1、限制信息输入</h1>
+
+<p>来自网络的信息输入越来越多，和几十年前比，人们还要面对以下一些干扰：</p>
+<ul>
+<li>电子邮件</li>
+<li>即时通讯软件</li>
+<li>twitter ,facebook</li>
+<li>论坛，博客</li>
+</ul>
+<a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 style=&quot;color:blue&quot;&gt;1、限制信息输入&lt;/h1&gt;
+
+&lt;p&gt;来自网络的信息输入越来越多，和几十年前比，人们还要面对以下一些干扰：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;电子邮件&lt;/li&gt;
+&lt;li&gt;即时通讯软件&lt;/li&gt;
+&lt;li&gt;twitter ,facebook&lt;/li&gt;
+&lt;li&gt;论坛，博客&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="看书" scheme="http://yoursite.com/tags/%E7%9C%8B%E4%B9%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>专注01-退一步思考</title>
+    <link href="http://yoursite.com/2017/07/27/%E4%B8%93%E6%B3%A801/"/>
+    <id>http://yoursite.com/2017/07/27/专注01/</id>
     <published>2017-07-27T14:36:21.000Z</published>
-    <updated>2017-07-27T15:10:30.336Z</updated>
+    <updated>2017-07-27T15:22:20.433Z</updated>
     
     <content type="html"><![CDATA[<h1 style="color:blue">1、注意力缺失的时代</h1>
 
@@ -57,6 +94,12 @@
 <hr>
 <p><strong>以上2017年7月27日抄的</strong></p>
 <hr>
+<h1 style="color:blue">4、专注的仪式</h1>
+
+<p>专注并不只是离线，专注是可以屏蔽所有影响，只关注眼下最重要的事情。仪式，是培养专注的好方法。仪式是习惯驱动的一系列动作，比如睡前阅读，比如醒来开手机。仪式往往是无意识的，而分心也是，所以在仪式中建立专注的习惯，会有助于减少分心。一些方法。</p>
+<blockquote>
+<p>早起的宁静时刻<br>一天工作开始时<br>重新专注<br>切换专注和休息<br>在两种专注中切换<br>先沟通在离线<br>每天结束时<br>每周总结的仪式</p>
+</blockquote>
 ]]></content>
     
     <summary type="html">
@@ -386,7 +429,7 @@
 <h2 id="关于收费"><a href="#关于收费" class="headerlink" title="关于收费"></a>关于收费</h2><p><strong>马克飞象</strong>为新用户提供 10 天的试用期，试用期过后需要<a href="maxiang.info/vip.html">续费</a>才能继续使用。未购买或者未及时续费，将不能同步新的笔记。之前保存过的笔记依然可以编辑。</p>
 <h2 id="反馈与建议"><a href="#反馈与建议" class="headerlink" title="反馈与建议"></a>反馈与建议</h2><ul>
 <li>微博：<a href="http://weibo.com/u/2788354117" target="_blank" rel="external">@马克飞象</a>，<a href="http://weibo.com/ggock" title="开发者个人账号" target="_blank" rel="external">@GGock</a></li>
-<li>邮箱：<a href="&#109;&#97;&#x69;&#x6c;&#x74;&#111;&#x3a;&#x68;&#117;&#115;&#116;&#x67;&#111;&#99;&#x6b;&#x40;&#103;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#x6d;">&#x68;&#117;&#115;&#116;&#x67;&#111;&#99;&#x6b;&#x40;&#103;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#x6d;</a></li>
+<li>邮箱：<a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#x3a;&#x68;&#x75;&#115;&#x74;&#103;&#x6f;&#99;&#107;&#64;&#x67;&#x6d;&#97;&#105;&#x6c;&#46;&#99;&#x6f;&#x6d;">&#x68;&#x75;&#115;&#x74;&#103;&#x6f;&#99;&#107;&#64;&#x67;&#x6d;&#97;&#105;&#x6c;&#46;&#99;&#x6f;&#x6d;</a></li>
 </ul>
 <hr>
 <p>感谢阅读这份帮助文档。请点击右上角，绑定印象笔记账号，开启全新的记录与分享体验吧。</p>
